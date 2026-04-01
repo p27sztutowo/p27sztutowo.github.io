@@ -98,8 +98,9 @@ h1, h2, h3 {
 
 .hero {
   height: 100vh;
-  min-height: 700px;
-  background: url('images/hero-p27-sztutowo.jpg') center/cover no-repeat fixed;
+  min-height: 650px;                    /* ważne na małych ekranach */
+  background: url('images/hero-p27-sztutowo.jpg') center/cover no-repeat;
+  background-attachment: scroll;        /* <-- najważniejsze zmiana */
   position: relative;
   display: flex;
   align-items: center;
