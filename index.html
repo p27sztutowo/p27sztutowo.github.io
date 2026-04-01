@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>P27 – Apartament w Sztutowie | Mierzeja Wiślana</title>
+  <meta name="description" content="Nowoczesny apartament P27 w Sztutowie – 30 m², dla 2–5 osób, 50 m od plaży, balkon, parking, klimatyzacja i pełen komfort."/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">P27</a>
+      <button class="hamburger" aria-label="Otwórz menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#o-apartamencie">O apartamencie</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#mierzeja">Okolica</a></li>
+        <li><a href="#lokalizacja">Lokalizacja</a></li>
+        <li><a href="#rezerwacja">Rezerwacja i cena</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>P27 Sztutowo</h1>
+      <p class="hero-subtitle">Komfortowy i przytulny apartament w Lazurowym Dworze
+w Sztutowie to miejsce na spokojny pobyt nad Bałtykiem.</p>
+      <a href="#rezerwacja" class="btn btn-primary">Zarezrwuj już dziś!</a>
+    </div>
+  </section>
+
+<!-- O APARTAMENCIE -->
+<section class="section" id="o-apartamencie">
+  <div class="container">
+    <h2>O apartamencie</h2>
+
+    <div class="apartament-description">
+  <h3>Apartament P27 – komfort i wygoda w każdym calu</h3>
+  
+  <p>
+    Przestronny apartament o powierzchni <strong>30 m²</strong>, idealny dla <strong>2–5 osób</strong>. 
+    Składa się z wygodnego <strong>salonu z w pełni wyposażonym aneksem kuchennym</strong>, oddzielnej 
+    <strong>sypialni</strong> oraz nowoczesnej <strong>łazienki z prysznicem</strong>.
+  </p>
+
+  <p>
+    Do dyspozycji Gości jest również <strong>duży balkon</strong> z widokiem na okolicę 
+    oraz gwarantowane <strong>miejsce parkingowe</strong> na terenie obiektu.
+  </p>
+
+  <div class="checkin-info">
+    <div>
+      <strong>Zameldowanie:</strong> od godziny 15:00
+    </div>
+    <div>
+      <strong>Wymeldowanie:</strong> do godziny 11:00
+    </div>
+  </div>
+
+  <h4>W pełni wyposażony na komfortowy pobyt:</h4>
+  <ul class="equipment-list">
+    <li>telewizor z płaskim ekranem</li>
+    <li>klimatyzacja</li>
+    <li>komplet pościeli i ręczników</li>
+    <li>suszarka do włosów</li>
+    <li>lodówka</li>
+    <li>czajnik elektryczny</li>
+    <li>kuchenka mikrofalowa</li>
+    <li>pełna zastawa stołowa, sztućce, garnki i patelnie</li>
+  </ul>
+</div>
+
+    <div class="additional-info">
+      <h3>Lazurowy Dwór – udogodnienia na terenie obiektu</h3>
+      <p>W obiekcie <strong>Lazurowy Dwór</strong> do dyspozycji Gości jest:</p>
+      
+      <ul class="benefits-list">
+        <li>strefa relaksu SPA* – sauna, jacuzzi, grota solna, fotele do masażu</li>
+        <li>zewnętrzny basen z podgrzewaną wodą (w sezonie letnim) + leżaki</li>
+        <li>miejsce do grillowania z altanką, stołami i krzesłami</li>
+        <li>restauracja** – bufet śniadaniowy oraz dania obiadowe</li>
+        <li>kącik zabaw dla dzieci, plac zabaw, piaskownica</li>
+      </ul>
+
+      <p class="small-print">
+        * Strefa SPA jest zarządzana przez niezależny podmiot zewnętrzny. Dostępność usług może ulec zmianie – aktualne informacje dostępne mailowo lub telefonicznie.
+      </p>
+      <p class="small-print">
+        ** Restauracja prowadzona jest przez zewnętrzną firmę i zazwyczaj działa w sezonie wakacyjnym (czerwiec–wrzesień).
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section class="section gallery" id="galeria">
+  <div class="container">
+    <h2>Galeria</h2>
+    <p class="gallery-subtitle">Zobacz, jak wygląda apartament P27 i otoczenie Lazurowego Dworu</p>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Zdjęcia będą wstawiane przez JS -->
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-content">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev">‹</button>
+    <img src="" alt="Zdjęcie apartamentu" id="lightboxImage" />
+    <button class="lightbox-next" id="lightboxNext">›</button>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+</div>
+<!-- MIERZEJA WIŚLANA -->
+<section class="section" id="mierzeja">
+  <div class="container">
+    <h2>Okolica</h2>
+
+    <p class="lead">
+      Sztutowo to spokojna, kameralna miejscowość położona na Mierzei Wiślanej – wąskim, piaszczystym skrawku lądu między Zatoką Gdańską a Zalewem Wiślanym. 
+      Szerokie, złociste plaże, gęste nadmorskie lasy i bliskość natury sprawiają, że to idealne miejsce na spokojny, rodzinny wypoczynek z dala od tłumów.
+    </p>
+
+    <ul class="attractions-list">
+      <li><strong>Żuławska Kolej Dojazdowa</strong> (trasa Sztutowo–Stegna–Jantar–Mikoszewo) – klimatyczna wąskotorówka idealna na rodzinną przejażdżkę</li>
+      <li><strong>Piaszczysta plaża w Sztutowie</strong> – ok. 2–3 km od centrum (ok. 40 min pieszo, 12 min melexem, 5 min samochodem)</li>
+      <li><strong>Muzeum Stutthof</strong> – ważny punkt pamięci historycznej, położone praktycznie w Sztutowie</li>
+      <li><strong>Stajnia u Bohuna</strong> – jazda konna i kontakt z końmi w pięknej scenerii</li>
+      <li><strong>Park Krajobrazowy „Mierzeja Wiślana”</strong> – doskonałe tereny na spacery, rower i nordic walking</li>
+      <li><strong>Kościół pw. św. Wojciecha</strong> – urokliwa architektura i lokalna historia</li>
+      <li>Sklepy i gastronomia: Biedronka, Dino, Polo Market, restauracje, smażalnie ryb, cukiernie i bary</li>
+    </ul>
+
+    <h3>Co warto zobaczyć na całej Mierzei Wiślanej?</h3>
+    <p>
+      Mierzeja to ponad 50 km piaszczystych plaż, lasów i atrakcji – od plażowania, przez rejsy, rowerowe wycieczki szlakiem R10, jazdę konną, parki linowe, aż po zwiedzanie. 
+      W pobliżu Sztutowa leżą urocze nadmorskie miejscowości:
+    </p>
+    <ul class="towns-list">
+      <li>Stegna</li>
+      <li>Jantar</li>
+      <li>Mikoszewo</li>
+      <li>Kąty Rybackie</li>
+      <li>Krynica Morska – największy kurort z piękną latarnią morską (najbardziej wysuniętą na wschód w Polsce)</li>
+      <li>Piaski – granica z obwodem kaliningradzkim</li>
+    </ul>
+
+    <p>
+      Jadąc w kierunku Krynicy Morskiej przejeżdża się przez <strong>Przekop Mierzei Wiślanej</strong> – nowy kanał żeglugowy łączący Zalew Wiślany z Zatoką Gdańską (ukończony i oddany do użytku w ostatnich latach).
+    </p>
+
+    <h3>Świetna baza wypadowa</h3>
+    <p>
+      Sztutowo to doskonały punkt startowy do jednodniowych wycieczek po regionie. W zasięgu krótkiej jazdy samochodem znajdziesz:
+    </p>
+    <ul class="trips-list">
+      <li>Trójmiasto: Gdańsk, Sopot, Gdynia</li>
+      <li>Zamek w Malborku</li>
+      <li>Elbląg i Frombork</li>
+      <li>całe Żuławy Wiślane i okolice</li>
+    </ul>
+
+    <p class="conclusion">
+      Niezależnie czy szukasz leniwego plażowania, aktywnego wypoczynku czy dawki historii – Mierzeja Wiślana i Sztutowo spełnią wszystkie oczekiwania.
+    </p>
+  </div>
+</section>
+      
+    </div>
+  </section>
+
+<!-- LOKALIZACJA -->
+<section class="section" id="lokalizacja">
+  <div class="container">
+    <h2>Lokalizacja</h2>
+    
+    <div class="location-content">
+      <div class="location-text">
+        <h3>Apartament P27 – idealna lokalizacja w Sztutowie</h3>
+        <p>
+          Apartament znajduje się w głównej części Sztutowa, w obiekcie <strong>Lazurowy Dwór</strong>, 
+           tuż obok stacji końcowej <strong>Żuławskiej Kolei Dojazdowej</strong>, zaledwie <strong>5 minut</strong> drogi od szerokiej piaszczystej plaży. 
+        </p>
+        </div>
+
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4267.284847167228!2d19.166592535628233!3d54.325987115791236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd3f4d25def393%3A0xcccd4b4701e891ff!2sGda%C5%84ska%2043%20B%2C%2082-110%20Sztutowo!5e0!3m2!1spl!2spl!4v1754899436062!5m2!1spl!2spl" 
+          width="100%" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- REZERWACJA I CENA -->
+<section class="section" id="rezerwacja">
+  <div class="container">
+    <h2>Rezerwacja i ceny</h2>
+    
+    <div class="reservation-content">
+      <div class="pricing-box">
+        <h3>Ceny apartamentu P27</h3>
+        <div class="price-list">
+          <div class="price-item">
+            <span class="season">Niski sezon (październik – kwiecień)</span>
+            <span class="price">od 350 zł / dobę</span>
+          </div>
+          <div class="price-item">
+            <span class="season">Średni sezon (maj, wrzesień)</span>
+            <span class="price">od 400 zł / dobę</span>
+          </div>
+          <div class="price-item highlight">
+            <span class="season">Wysoki sezon (czerwiec – sierpień)</span>
+            <span class="price">od 490 zł / dobę</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reservation-actions">
+        <h3>Jak zarezerwować?</h3>
+        <p>Najwygodniej i najszybciej zarezerwujesz apartament przez platformę Booking.com</p>
+        
+        <a href="https://www.booking.com/hotel/pl/apartament-p27.pl.html" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="btn btn-primary btn-large">
+          Zarezerwuj na Booking.com
+        </a>
+
+        <div class="alternative-contact">
+          <p>lub skontaktuj się z nami bezpośrednio:</p>
+          <a href="mailto:p27.paulina@gmail.com" class="contact-link">
+            ✉ p27.paulina@gmail.com
+          </a>
+          <a href="tel:+48512227272" class="contact-link">
+            ☎ +48 512 22 72 72
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="reservation-info">
+      <div class="info-card">
+        <h4>Polityka rezerwacji</h4>
+        <ul>
+          <li>Podane ceny dotyczą apartamentu dla maksymalnie 4 osób</li>
+          <li>Ostateczna cena zależy od terminu, ilości osób i długości pobytu</li>
+          <li>Ceny mogą się różnić w okresach świątecznych</li>
+          <li>Minimalny pobyt: 2 doby</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="section contact" id="kontakt">
+  <div class="container">
+    <h2>Kontakt</h2>
+    
+    <div class="contact-box">
+      <div class="contact-details">
+        <div class="contact-row">
+          <span class="icon">📍</span>
+          <div class="contact-info">
+            <strong>Adres:</strong><br>
+            ul. Gdańska 43B<br>
+            82-110 Sztutowo
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <span class="icon">☎</span>
+          <div class="contact-info">
+            <strong>Telefon:</strong><br>
+            <a href="tel:+48512227272">+48 512 227 272</a>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <span class="icon">✉</span>
+          <div class="contact-info">
+            <strong>E-mail:</strong><br>
+            <a href="mailto:p27.paulina@gmail.com">p27.paulina@gmail.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-cta">
+        <p>Chętnie odpowiemy na Twoje pytania dotyczące rezerwacji i dostępności.</p>
+        <a href="mailto:p27.paulina@gmail.com?subject=Zapytanie%20o%20apartament%20P27" 
+           class="btn btn-primary">
+          Napisz do nas
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEKCKJA SONG -->
+<section class="song-section" id="song">
+  <div class="song-content">
+    <div class="song-header">
+      <h2>Nasza ulubiona piosenka na plażowe wieczory</h2>
+      <p class="song-subtitle">Idealna do słuchania przy zachodzie słońca nad Bałtykiem</p>
+    </div>
+
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube-nocookie.com/embed/6_5KAVd_caY?rel=0&amp;modestbranding=1&amp;playsinline=1" 
+        title="Nasza ulubiona piosenka na plażowe wieczory" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="lyrics-box">
+      <h3>Tekst piosenki</h3>
+      <pre class="song-lyrics">
+To fale, fale, fale kołyszą lekko nas
+A my tak doskonale spędzamy razem czas
+
+I mewy, mewy, mewy stworzyły morski chór
+I my zaśpiewać chcemy, nasz głos dosięgnie chmur
+
+A może to morze, a może to wiatr
+A może to muzyka w naszych sercach gra
+A może to morze, a może to wiatr
+A może to przyjaźń, co będzie już trwać
+
+Oj biedne, biedne ryby, bo cichy jest ich los
+I bawią się na niby, że niby mają głos
+Więc my im pomożemy i zaśpiewamy tak
+Niech nasze dźwięki płyną od Nordy aż do Tatr
+
+A może to morze, a może to wiatr
+A może to muzyka w naszych sercach gra
+A może to morze, a może to wiatr
+A może to przyjaźń, co będzie już trwać
+      </pre>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 P27 Sztutowo – wszystkie prawa zastrzeżone</p>
+      <div class="footer-links">
+        <a href="#">Regulamin</a> | <a href="#">Polityka prywatności</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
