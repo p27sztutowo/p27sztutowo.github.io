@@ -154,6 +154,22 @@ h1, h2, h3 {
   transform: translateY(-2px);
 }
 
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+    min-height: 100vh;                    /* pełne wysokość na telefonie */
+    background-position: center 25%;      /* lekko przesuwamy w dół, żeby nie zasłaniać ważnej części */
+  }
+
+  .hero h1 {
+    font-size: 3.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
 /* ── SEKCJE ─────────────────────────────────────────────────── */
 
 .section {
