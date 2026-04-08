@@ -98,9 +98,8 @@ h1, h2, h3 {
 
 .hero {
   height: 100vh;
-  min-height: 650px;                    /* ważne na małych ekranach */
-  background: url('images/hero-p27-sztutowo.jpg') center/cover no-repeat;
-  background-attachment: scroll;        /* <-- najważniejsze zmiana */
+  min-height: 700px;
+  background: url('images/hero-p27-sztutowo.jpg') center/cover no-repeat fixed;
   position: relative;
   display: flex;
   align-items: center;
@@ -152,22 +151,6 @@ h1, h2, h3 {
 .btn-primary:hover {
   background: #e0b88a;
   transform: translateY(-2px);
-}
-
-@media (max-width: 768px) {
-  .hero {
-    background-attachment: scroll;
-    min-height: 100vh;                    /* pełne wysokość na telefonie */
-    background-position: center 25%;      /* lekko przesuwamy w dół, żeby nie zasłaniać ważnej części */
-  }
-
-  .hero h1 {
-    font-size: 3.8rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.25rem;
-  }
 }
 
 /* ── SEKCJE ─────────────────────────────────────────────────── */
@@ -306,7 +289,7 @@ h2 {
   font-size: 1.15rem;
   line-height: 1.85;
   color: #eee;
-  text-align: center;
+  text-align: left;
   white-space: pre-wrap;
   background: none;
   border: none;
@@ -334,6 +317,21 @@ h2 {
     line-height: 1.75;
   }
 }
+
+/* Footer */
+footer {
+  background: #081528;
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.footer-links a {
+  color: #d4a373;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
 /* ── RESPONSIVE ─────────────────────────────────────────────── */
 
 @media (max-width: 768px) {
@@ -1067,4 +1065,3 @@ h2 {
     font-size: 1.7rem;
   }
 }
-
