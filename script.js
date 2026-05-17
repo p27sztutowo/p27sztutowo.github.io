@@ -1,4 +1,4 @@
-// Hamburger menu
+// ====================== MENU + NAV ======================
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const nav = document.querySelector('#navbar');
@@ -8,6 +8,7 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
 });
 
+// Zamknij menu po kliknięciu w link
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('active');
@@ -21,7 +22,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
   });
 });
@@ -36,7 +40,6 @@ window.addEventListener('scroll', () => {
 });
 
 // ====================== GALERIA + LIGHTBOX ======================
-
 const images = [
   { src: "gallery/salon1.jpg", caption: "Salon z aneksem kuchennym" },
   { src: "gallery/salon2.jpg", caption: "Przestronny salon" },
@@ -62,11 +65,10 @@ const lightboxNext = document.getElementById('lightboxNext');
 
 let currentIndex = 0;
 
-// Tworzenie miniaturek
+// Tworzenie miniaturek galerii
 images.forEach((image, index) => {
   const item = document.createElement('div');
   item.classList.add('gallery-item');
-  
   item.innerHTML = `<img src="${image.src}" alt="${image.caption}" loading="lazy">`;
   
   item.addEventListener('click', () => {
@@ -89,7 +91,7 @@ function hideLightbox() {
   document.body.style.overflow = 'visible';
 }
 
-// Nawigacja w lightboxie
+// Nawigacja lightbox
 lightboxPrev.addEventListener('click', () => {
   currentIndex = (currentIndex - 1 + images.length) % images.length;
   showLightbox();
@@ -102,7 +104,7 @@ lightboxNext.addEventListener('click', () => {
 
 lightboxClose.addEventListener('click', hideLightbox);
 
-// Zamknięcie lightboxa klawiszem ESC
+// Zamknięcie klawiszem ESC + strzałkami
 document.addEventListener('keydown', (e) => {
   if (!lightbox.classList.contains('active')) return;
   
