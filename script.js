@@ -1,4 +1,4 @@
-// ====================== MENU + NAV ======================
+// Hamburger menu
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const nav = document.querySelector('#navbar');
@@ -8,7 +8,6 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
 });
 
-// Zamknij menu po kliknięciu w link
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('active');
@@ -22,10 +21,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
 });
@@ -40,6 +36,7 @@ window.addEventListener('scroll', () => {
 });
 
 // ====================== GALERIA + LIGHTBOX ======================
+
 const images = [
   { src: "gallery/salon1.jpg", caption: "Salon z aneksem kuchennym" },
   { src: "gallery/salon2.jpg", caption: "Przestronny salon" },
@@ -65,10 +62,11 @@ const lightboxNext = document.getElementById('lightboxNext');
 
 let currentIndex = 0;
 
-// Tworzenie miniaturek galerii
+// Tworzenie miniaturek
 images.forEach((image, index) => {
   const item = document.createElement('div');
   item.classList.add('gallery-item');
+  
   item.innerHTML = `<img src="${image.src}" alt="${image.caption}" loading="lazy">`;
   
   item.addEventListener('click', () => {
@@ -91,7 +89,7 @@ function hideLightbox() {
   document.body.style.overflow = 'visible';
 }
 
-// Nawigacja lightbox
+// Nawigacja w lightboxie
 lightboxPrev.addEventListener('click', () => {
   currentIndex = (currentIndex - 1 + images.length) % images.length;
   showLightbox();
@@ -104,7 +102,7 @@ lightboxNext.addEventListener('click', () => {
 
 lightboxClose.addEventListener('click', hideLightbox);
 
-// Zamknięcie klawiszem ESC + strzałkami
+// Zamknięcie lightboxa klawiszem ESC
 document.addEventListener('keydown', (e) => {
   if (!lightbox.classList.contains('active')) return;
   
@@ -116,4 +114,60 @@ document.addEventListener('keydown', (e) => {
 // Zamknięcie po kliknięciu w tło
 lightbox.addEventListener('click', (e) => {
   if (e.target === lightbox) hideLightbox();
+});
+
+// Cookie banner
+function setCookie(name, value, days) {
+  const date = new Date();
+  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+  document.cookie = name + "=" + value + ";path=/;expires=" + date.toUTCString();
+}
+
+function getCookie(name) {
+  const value = "; " + document.cookie;
+  const parts = value.split("; " + name + "=");
+  if (parts.length === 2) return parts.pop().split(";").shift();
+}
+
+function acceptCookies() {
+  setCookie("cookieConsent", "true", 365);
+  document.getElementById("cookieBanner").style.display = "none";
+}
+
+// Pokazanie banera
+window.onload = function() {
+  if (!getCookie("cookieConsent")) {
+    document.getElementById("cookieBanner").style.display = "block";
+  }
+};
+
+// Funkcje do modalów
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = "block";
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = "none";
+  document.body.style.overflow = "visible";
+}
+
+// Zamknięcie po kliknięciu w tło
+document.querySelectorAll('.modal').forEach(modal => {
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal(modal.id);
+    }
+  });
+});
+
+// Zamknięcie klawiszem ESC
+document.addEventListener('keydown', function(e) {
+  if (e.key === "Escape") {
+    document.querySelectorAll('.modal').forEach(modal => {
+      if (modal.style.display === "block") {
+        closeModal(modal.id);
+      }
+    });
+  }
 });
