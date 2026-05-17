@@ -3231,3 +3231,128 @@ footer {
     font-size: 1.7rem;
   }
 }
+
+/* COOKIE BANNER */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(10, 29, 55, 0.98);
+  border-top: 1px solid #d4a373;
+  z-index: 9999;
+  padding: 18px 20px;
+  display: none;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.3);
+}
+
+.cookie-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cookie-content p {
+  margin: 0;
+  font-size: 0.98rem;
+  flex: 1;
+  min-width: 280px;
+}
+
+.cookie-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.cookie-link {
+  color: #d4a373;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cookie-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .cookie-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ── MODALE Z IFRAME ───────────────────────────────────────────── */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 29, 55, 0.95);
+  overflow: hidden;
+}
+
+.modal-content {
+  background: #0f2544;
+  margin: 3% auto;
+  width: 90%;
+  max-width: 860px;
+  height: 92vh;
+  border-radius: 16px;
+  position: relative;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.7);
+  overflow: hidden;
+  border: 1px solid #d4a373;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 2.8rem;
+  color: #d4a373;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10001;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #fff;
+}
+
+.modal-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 16px;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .modal-content {
+    margin: 2% auto;
+    width: 96%;
+    height: 94vh;
+  }
+  
+  .modal-close {
+    font-size: 2.4rem;
+    top: 10px;
+    right: 15px;
+  }
+}
+/* Linki w stopce */
+.footer-links a {
+  cursor: pointer;
+}
