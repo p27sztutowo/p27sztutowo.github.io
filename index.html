@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>P27 – Apartament w Sztutowie | Mierzeja Wiślana</title>
   <meta name="description" content="Nowoczesny apartament P27 w Sztutowie – 30 m², dla 2–5 osób, 50 m od plaży, balkon, parking, klimatyzacja i pełen komfort."/>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -378,15 +379,44 @@ A może to przyjaźń, co będzie już trwać
 </section>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 P27 Sztutowo – wszystkie prawa zastrzeżone</p>
-      <div class="footer-links">
-        <a href="#">Regulamin</a> | <a href="#">Polityka prywatności</a>
-      </div>
+ <footer>
+  <div class="container">
+    <p>&copy; 2026 P27 Sztutowo – wszystkie prawa zastrzeżone</p>
+    <div class="footer-links">
+      <a onclick="openModal('modalRegulamin')">Regulamin</a> | 
+      <a onclick="openModal('modalPrivacy')">Polityka prywatności</a>
     </div>
-  </footer>
+  </div>
+</footer>
 
+  <!-- MODALE -->
+<div class="modal" id="modalRegulamin">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modalRegulamin')">&times;</button>
+    <iframe src="regulamin.html" class="modal-iframe" title="Regulamin"></iframe>
+  </div>
+</div>
+
+<div class="modal" id="modalPrivacy">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal('modalPrivacy')">&times;</button>
+    <iframe src="privacy.html" class="modal-iframe" title="Polityka Prywatności"></iframe>
+  </div>
+</div>
+  
   <script src="script.js"></script>
+  <!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-content">
+    <p>
+      Ta strona używa cookies (w tym od Google Maps i YouTube) w celu zapewnienia lepszego doświadczenia przeglądania. 
+      Kontynuując korzystanie ze strony, zgadzasz się na ich użycie.
+    </p>
+    <div class="cookie-buttons">
+      <button onclick="acceptCookies()" class="btn btn-primary">Akceptuję</button>
+      <a href="regulamin.html" class="cookie-link">Dowiedz się więcej</a>
+    </div>
+  </div>
+</div>
 </body>
 </html>
