@@ -3341,3 +3341,25 @@ footer {
 .footer-links a {
   cursor: pointer;
 }
+/* ── SEKCJA OPINIE ─────────────────────────────────────────────── */
+
+#opinie {
+  background: #0a1d37;
+}
+
+#opinie .lead {
+  margin-bottom: 3rem;
+}
+
+/* Stylizacja widgetu Elfsight */
+.elfsight-app-7b47409e-9f93-4b98-b9ec-85e9a78e882a {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Dostosowanie wyglądu widgetu do kolorystyki strony */
+@media (max-width: 768px) {
+  #opinie {
+    padding: 80px 0;
+  }
+}
